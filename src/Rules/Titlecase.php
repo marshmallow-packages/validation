@@ -1,0 +1,48 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Marshmallow\Validation\Rules;
+
+use Marshmallow\Validation\AbstractRule;
+
+class Titlecase extends AbstractRule
+{
+    /**
+     * Determine if the validation rule passes.
+     *
+     * @param mixed $value
+     * @return bool
+     */
+    public function isValid(mixed $value): bool
+    {
+        foreach ($this->getWords($value) as $word) {
+            if (!$this->isValidWord($word)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Get array of words from current value
+     *
+     * @return array
+     */
+    private function getWords($value): array
+    {
+        return explode(" ", $value);
+    }
+
+    /**
+     * Determine if given word starts with upper case letter or number
+     *
+     * @param string $word
+     * @return bool
+     */
+    private function isValidWord(string $word): bool
+    {
+        return (bool) preg_match("/^[\p{Lu}0-9]/u", $word);
+    }
+}
