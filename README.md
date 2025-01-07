@@ -1,5 +1,3 @@
-<img src="/docs/Marshmallow (2).png" style="border-radius:20px;">
-
 # Validation
 
 `marshmallow-validation` is an extension library for Laravel's own validation
