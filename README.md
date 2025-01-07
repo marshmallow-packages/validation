@@ -1,6 +1,8 @@
-# Marshmallow Validation
+<img src="/docs/Marshmallow (2).png" style="border-radius:20px;">
 
-Marshmallow Validation is an extension library for Laravel's own validation
+# Validation
+
+`marshmallow-validation` is an extension library for Laravel's own validation
 system. The package adds rules to validate data like IBAN, BIC, ISBN,
 creditcard numbers and more.
 
