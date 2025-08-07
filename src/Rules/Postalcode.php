@@ -108,7 +108,7 @@ class Postalcode extends AbstractRule implements DataAwareRule
     {
         if (count($this->countrycodes) == 0) {
             // return country code by reference
-            if (is_array($this->data) && array_key_exists($this->reference, $this->data)) {
+            if (array_key_exists($this->reference, $this->data)) {
                 return [$this->data[$this->reference]];
             }
         }
