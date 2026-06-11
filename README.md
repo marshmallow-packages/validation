@@ -96,6 +96,12 @@ The field under validation must be a well formed [domainname](https://en.wikiped
 
     public Marshmallow\Validation\Rules\Domainname::__construct()
 
+### Dutch phone number
+
+The field under validation must be a valid Dutch phone number, optionally including a `+31`, `0031` or `0` country prefix.
+
+    public Marshmallow\Validation\Rules\Dutchphonenumber::__construct()
+
 ### European Article Number (EAN)
 
 Checks for a valid [European Article Number](https://en.wikipedia.org/wiki/International_Article_Number).
